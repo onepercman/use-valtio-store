@@ -1,4 +1,4 @@
-# use-valtio
+# use-valtio-store
 
 This React hook provides a way to manage state using Valtio, supporting persistent states with `localStorage` and `sessionStorage`.
 
@@ -7,7 +7,7 @@ This React hook provides a way to manage state using Valtio, supporting persiste
 1. Install React and ReactDOM if you haven't already:
 
    ```zsh
-   npm install use-valtio
+   npm install use-valtio-store
    ```
 
 2. Usage
@@ -15,7 +15,7 @@ This React hook provides a way to manage state using Valtio, supporting persiste
 - Basic
 
 ```ts
-import { createStore } from 'use-valtio'
+import { createStore } from 'use-valtio-store'
 
 const initialState = {
   count: 0,
@@ -33,7 +33,7 @@ const store = createStore(initialState, {
 - Class
 
 ```ts
-import { createStore } from 'use-valtio'
+import { createStore } from 'use-valtio-store'
 
 class MyStore {
   count: 0

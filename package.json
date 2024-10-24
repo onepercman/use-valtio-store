@@ -1,5 +1,5 @@
 {
-  "name": "use-valtio",
+  "name": "use-valtio-store",
   "version": "1.0.0",
   "author": "onepercman",
   "description": "A React hook for managing state with Valtio, supporting persistent states using localStorage and sessionStorage, and optimized for server-side rendering.",
@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/onepercman/use-valtio"
+    "url": "https://github.com/onepercman/use-valtio-store"
   },
   "bugs": {
-    "url": "https://github.com/onepercman/use-valtio/issues"
+    "url": "https://github.com/onepercman/use-valtio-store/issues"
   },
-  "homepage": "https://github.com/onepercman/use-valtio",
+  "homepage": "https://github.com/onepercman/use-valtio-store",
   "keywords": [
     "valtio",
     "react",
