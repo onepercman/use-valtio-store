@@ -1,0 +1,56 @@
+{
+  "name": "use-valtio",
+  "version": "1.0.0",
+  "author": "onepercman",
+  "description": "A React hook for managing state with Valtio, supporting persistent states using localStorage and sessionStorage, and optimized for server-side rendering.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onepercman/use-valtio"
+  },
+  "bugs": {
+    "url": "https://github.com/onepercman/use-valtio/issues"
+  },
+  "homepage": "https://github.com/onepercman/use-valtio",
+  "keywords": [
+    "valtio",
+    "react",
+    "hook",
+    "state-management",
+    "persistent-state",
+    "local-storage",
+    "session-storage",
+    "ssr",
+    "server-side-rendering",
+    "react-hooks"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "valtio": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.9",
+    "prettier": "^3.3.3",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3"
+  }
+}
