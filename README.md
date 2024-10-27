@@ -4,10 +4,10 @@ This React hook provides a way to manage state using Valtio, supporting persiste
 
 ## Installation
 
-1. Install React and ReactDOM if you haven't already:
+1. Install:
 
    ```zsh
-   npm install use-valtio-store
+   npm install valtio use-valtio-store
    ```
 
 2. Usage
@@ -36,7 +36,7 @@ const store = createStore(initialState, {
 import { createStore } from 'use-valtio-store'
 
 class MyStore {
-  count: 0
+  count = 0
 
   get double() {
     return this.count * 2
