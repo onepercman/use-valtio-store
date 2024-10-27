@@ -82,10 +82,26 @@ function _createPersistStore<T extends object>(
   const mergedState = _getMergedState(initialObject, _getPersistedData(key, storage))
   _persist(key, mergedState, storage, { exclude, include })
   onInit && onInit(mergedState)
+
   const state = proxy(mergedState)
+
+  const storageListener = (event: StorageEvent) => {
+    if (event.key === key && event.storageArea === _getStorage(storage)) {
+      const mergedState = _getMergedState(initialObject, _getPersistedData(key, storage))
+      Object.assign(state, mergedState)
+    }
+  }
+
+  window.addEventListener('storage', storageListener)
+
   subscribe(state, () => {
     _persist(key, state, storage, { exclude, include })
   })
+
+  window.addEventListener('beforeunload', () => {
+    window.removeEventListener('storage', storageListener)
+  })
+
   return state
 }
 
